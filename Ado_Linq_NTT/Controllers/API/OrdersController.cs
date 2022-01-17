@@ -71,8 +71,15 @@ namespace Ado_Linq_NTT.Controllers.API
         // PUT: api/Orders/5
         public IHttpActionResult Put(int id, [FromBody] Order order)
         {
-            try { 
-            return Ok();
+            try {
+                Order orderToChange = dataContext.Orders.First(item => item.Id == id);
+                orderToChange.DateOrder = order.DateOrder;
+                orderToChange.MoneyPaid = order.MoneyPaid;
+                orderToChange.IdOfInviting = order.IdOfInviting;
+                orderToChange.NameEmployee = order.NameEmployee;
+                dataContext.SubmitChanges();
+                List<Order> orders = dataContext.Orders.ToList();
+                return Ok(new { orders });
             }
             catch (SqlException ex)
             {
@@ -87,8 +94,12 @@ namespace Ado_Linq_NTT.Controllers.API
         // DELETE: api/Orders/5
         public IHttpActionResult Delete(int id)
         {
-            try { 
-            return Ok();
+            try {
+                Order orderToDelete = dataContext.Orders.First(item => item.Id == id);
+                dataContext.Orders.DeleteOnSubmit(orderToDelete);
+                dataContext.SubmitChanges();
+                List<Order> orders = dataContext.Orders.ToList();
+                return Ok(new { orders });
             }
             catch (SqlException ex)
             {
