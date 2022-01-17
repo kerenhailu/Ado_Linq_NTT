@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 8.5" name="Deziner">
+  <DataContextMoniker Name="/DezinerDataContext" />
+  <nestedChildShapes>
+    <classShape Id="ecbc578d-817f-42f6-9001-f8e5d1f66035" absoluteBounds="5.25, 1.375, 2, 1.9631982421875">
+      <DataClassMoniker Name="/DezinerDataContext/Order" />
+      <nestedChildShapes>
+        <elementListCompartment Id="3568e072-061f-4f2c-90a3-4db74eedbd5a" absoluteBounds="5.265, 1.835, 1.9700000000000002, 1.4031982421875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>
