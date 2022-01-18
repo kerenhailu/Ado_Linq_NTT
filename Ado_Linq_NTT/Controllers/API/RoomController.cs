@@ -95,11 +95,7 @@ namespace Ado_Linq_NTT.Controllers.API
                     int rowsEffected = command.ExecuteNonQuery();
                     connection.Close();
                     return Ok(rowsEffected);
-                    //ID = iD;
-                    //RoomNumber = roomNumber;
-                    //TYPE = tYPE;
-                    //IsBlank = isBlank;
-                    //Price = price;
+                    
                 }
             }
             catch (SqlException ex)
